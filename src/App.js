@@ -9,7 +9,7 @@ const client_secret = "b392e37deb804c08a6e56e613b9e3884";
 const redirect_uri = "http://timetospotify.vercel.app";
 const id = "43ZHCT0cAZBISjO8DG9PnE";
 const auth = "BQAw_fIvgFUpFFTf2AoRzEdq8H0lHXTMpCZvYuF-mr4DNJPkT2KImnjvkECj3cqzxgKbcyYLtRJoli8w-51F0kTcrWRy0_xfDzL9zy2KJ8m853MXP22i7L6DNG9dRZcaZpOs-kOalwt44w";
-const length = '';
+const length = '1';
 
 function App() {
   var Spotify = require('spotify-web-api-js');
@@ -18,7 +18,7 @@ function App() {
   spotifyApi.setAccessToken(auth);
   spotifyApi.searchTracks('Love').then(
     function (data) {
-      length = data.tracks[0].duration_ms;
+      //length = data.tracks[0].duration_ms;
       console.log('Search by "Love"', data);
     },
     function (err) {
