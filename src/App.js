@@ -14,7 +14,8 @@ function App() {
   }, []);
   return (
     <main>
-      <h1>Create React App + Go API</h1>
+      <h1>Time to Spotify</h1>
+      <h2>A timer using the lengths of songs</h2>
       <h2>
         Deployed with{' '}
         <a
