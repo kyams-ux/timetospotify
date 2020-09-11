@@ -1,6 +1,6 @@
 /* global module */
 'use strict';
-export default SpotifyWebApi
+//export default SpotifyWebApi
 /**
  * Class representing the API
  */
