@@ -13,7 +13,7 @@ function App() {
   const client_secret = "b392e37deb804c08a6e56e613b9e3884";
   const redirect_uri = "http://timetospotify.vercel.app";
   const id = "43ZHCT0cAZBISjO8DG9PnE";
-  const accessToken = "BQD0BXU_Z1bB8Vkq4of_sQcFr66I4PBTGbU0dOJ0Vvu6K126CcL1RxqKmaFzdRID2Y56z6wRJ8bIGWe9mUPnopTmoP_gcuMZyYW8J7vhD1XlSY1xJoJlhB0BhPafNRjXvObx_TFttOJCsw";
+  const accessToken = "BQCCuRgVuOzpHLJSlMQcoz25UY6rPxHj9CQVgIkSzs_nUYKlQ1cOaQ0QHfLFri2nOAEsYrryZZPaM6hJE7LT1AsiTYIMn26tFy2cM7fcuQ0DSYvHo1RUwzjeb0tC7SVz8NrqvY55ab2BZA";
   const duration = "5";
 
   fetch('https://api.spotify.com/v1/artists/21E3waRsmPlU7jZsS13rcj', {
