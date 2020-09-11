@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import './App.css';
-//import SpotifyWebApi from 'spotify-web-api-js';
+import SpotifyWebApi from 'spotify-web-api-js';
 //import '../../spotify-web-api-js-master/spotify-web-api-js-master/src/spotify-web-api.js';
 
 
@@ -12,10 +12,10 @@ function App() {
   const redirect_uri = "http://timetospotify.vercel.app";
   const id = "43ZHCT0cAZBISjO8DG9PnE";
   const auth = "BQCNs3eRlBH7164kg41sMMwReF76jRhbiWjgi3n3_4UxGaG3UPF8rNedwigm_YZW40xTNW8JRGZfXTh-1vbQH_JGuaRJt957VFaz1UD0cft06WdpxPK_mHrcoZmEXgvz63sGd8mHpOt-OA";
-  const duration = "2";
+  const duration = "3";
   //var Spotify = require('spotify-web-api-js');
  // var s = new Spotify();
- //  var spotifyApi = new SpotifyWebApi();
+  // var spotifyApi = new SpotifyWebApi();
  // spotifyApi.setAccessToken(auth);
  // spotifyApi.searchTracks('Love').then(
  //   function (data) {
