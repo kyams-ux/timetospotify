@@ -1,17 +1,18 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import './App.css';
-import SpotifyWebApi from 'spotify-web-api-js';
+//import SpotifyWebApi from 'spotify-web-api-js';
 //import '../../spotify-web-api-js-master/spotify-web-api-js-master/src/spotify-web-api.js';
 
-const client_id = "639db5cc638f46aeb796d411a8f4de45";
-const client_secret = "b392e37deb804c08a6e56e613b9e3884";
-const redirect_uri = "http://timetospotify.vercel.app";
-const id = "43ZHCT0cAZBISjO8DG9PnE";
-const auth = "BQCNs3eRlBH7164kg41sMMwReF76jRhbiWjgi3n3_4UxGaG3UPF8rNedwigm_YZW40xTNW8JRGZfXTh-1vbQH_JGuaRJt957VFaz1UD0cft06WdpxPK_mHrcoZmEXgvz63sGd8mHpOt-OA";
-const duration = "1";
+
 
 function App() {
+  const client_id = "639db5cc638f46aeb796d411a8f4de45";
+  const client_secret = "b392e37deb804c08a6e56e613b9e3884";
+  const redirect_uri = "http://timetospotify.vercel.app";
+  const id = "43ZHCT0cAZBISjO8DG9PnE";
+  const auth = "BQCNs3eRlBH7164kg41sMMwReF76jRhbiWjgi3n3_4UxGaG3UPF8rNedwigm_YZW40xTNW8JRGZfXTh-1vbQH_JGuaRJt957VFaz1UD0cft06WdpxPK_mHrcoZmEXgvz63sGd8mHpOt-OA";
+  const duration = "1";
  // var Spotify = require('spotify-web-api-js');
  // var s = new Spotify();
  //  var spotifyApi = new SpotifyWebApi();
