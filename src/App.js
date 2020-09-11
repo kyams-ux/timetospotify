@@ -23,13 +23,8 @@ function App() {
                 'Authorization': 'Bearer ' + accessToken
             }
         })
-            .then((response) => {
-                console.log(response.json().then(
-                    (data) => { console.log(data) }
-                ));
-            }){
-              duration = "6";
-            };
+            .then(function(response){ duration = "6";}
+            );
   //var SpotifyWebApi = require('spotify-web-api-js');
   //var spotifyApi = new SpotifyWebApi();
 // var spotifyApi = new SpotifyWebApi();
