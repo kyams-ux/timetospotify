@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import './App.css';
-import SpotifyWebApi from 'spotify-web-api-js'
+import SpotifyWebApi from 'spotify-web-api-js';
 //import '../../spotify-web-api-js-master/spotify-web-api-js-master/src/spotify-web-api.js';
 
 const client_id = "639db5cc638f46aeb796d411a8f4de45";
