@@ -1,8 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import './App.css';
-import SpotifyWebApi from 'spotify-web-api-js';
-//import '../../spotify-web-api-js-master/spotify-web-api-js-master/src/spotify-web-api.js';
+//import SpotifyWebApi from 'spotify-web-api-js';
+import '../../spotify-web-api-js-master/spotify-web-api-js-master/src/spotify-web-api.js';
 
 
 
