@@ -12,18 +12,18 @@ const auth = "BQAw_fIvgFUpFFTf2AoRzEdq8H0lHXTMpCZvYuF-mr4DNJPkT2KImnjvkECj3cqzxg
 const length = '1';
 
 function App() {
-  var Spotify = require('spotify-web-api-js');
-  var s = new Spotify();
+ var Spotify = require('spotify-web-api-js');
+ var s = new Spotify();
   var spotifyApi = new SpotifyWebApi();
-  spotifyApi.setAccessToken(auth);
-  spotifyApi.searchTracks('Love').then(
-    function (data) {
-      //length = data.tracks[0].duration_ms;
-      console.log('Search by "Love"', data);
-    },
-    function (err) {
-      console.error(err);
-    }
+ spotifyApi.setAccessToken(auth);
+ spotifyApi.searchTracks('Love').then(
+   function (data) {
+      length = data.tracks[0].duration_ms;
+     console.log('Search by "Love"', data);
+   },
+   function (err) {
+     console.error(err);
+   }
 
   const [date, setDate] = useState(null);
   useEffect(() => {
@@ -34,7 +34,7 @@ function App() {
     }
     getDate();
   }, []);
-};
+
   return (
     <main>
       <h1>Time to Spotify</h1>
