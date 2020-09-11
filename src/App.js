@@ -13,8 +13,21 @@ function App() {
   const client_secret = "b392e37deb804c08a6e56e613b9e3884";
   const redirect_uri = "http://timetospotify.vercel.app";
   const id = "43ZHCT0cAZBISjO8DG9PnE";
-  const auth = "BQCNs3eRlBH7164kg41sMMwReF76jRhbiWjgi3n3_4UxGaG3UPF8rNedwigm_YZW40xTNW8JRGZfXTh-1vbQH_JGuaRJt957VFaz1UD0cft06WdpxPK_mHrcoZmEXgvz63sGd8mHpOt-OA";
-  const duration = "3";
+  const accessToken = "BQD0BXU_Z1bB8Vkq4of_sQcFr66I4PBTGbU0dOJ0Vvu6K126CcL1RxqKmaFzdRID2Y56z6wRJ8bIGWe9mUPnopTmoP_gcuMZyYW8J7vhD1XlSY1xJoJlhB0BhPafNRjXvObx_TFttOJCsw";
+  const duration = "4";
+
+  fetch('https://api.spotify.com/v1/artists/21E3waRsmPlU7jZsS13rcj', {
+            method: 'GET', headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + accessToken
+            }
+        })
+            .then((response) => {
+                console.log(response.json().then(
+                    (data) => { console.log(data) }
+                ));
+            });
   //var SpotifyWebApi = require('spotify-web-api-js');
   //var spotifyApi = new SpotifyWebApi();
 // var spotifyApi = new SpotifyWebApi();
