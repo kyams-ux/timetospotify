@@ -16,14 +16,14 @@ function App() {
     <main>
       <h1>Time to Spotify</h1>
       <h2>A timer using the lengths of songs</h2>
-    
       <br />
       <h2>The date according to Go is:</h2>
       <p>{date ? date : 'Loading date...'}</p>
       <br />
-      <p> A work in progress by
+      <p> A work in progress by{' '}
         <a href="https://www.instagram.com/kaleandyams/">
         Kayla
+        </a>
       </p>
     </main>
   );
