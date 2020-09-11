@@ -24,7 +24,6 @@ function App() {
     function (err) {
       console.error(err);
     }
-  );
 
   const [date, setDate] = useState(null);
   useEffect(() => {
@@ -35,6 +34,7 @@ function App() {
     }
     getDate();
   }, []);
+};
   return (
     <main>
       <h1>Time to Spotify</h1>
