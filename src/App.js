@@ -14,7 +14,7 @@ function App() {
   const redirect_uri = "http://timetospotify.vercel.app";
   const id = "43ZHCT0cAZBISjO8DG9PnE";
   const accessToken = "BQD0BXU_Z1bB8Vkq4of_sQcFr66I4PBTGbU0dOJ0Vvu6K126CcL1RxqKmaFzdRID2Y56z6wRJ8bIGWe9mUPnopTmoP_gcuMZyYW8J7vhD1XlSY1xJoJlhB0BhPafNRjXvObx_TFttOJCsw";
-  const duration = "4";
+  const duration = "5";
 
   fetch('https://api.spotify.com/v1/artists/21E3waRsmPlU7jZsS13rcj', {
             method: 'GET', headers: {
@@ -27,7 +27,9 @@ function App() {
                 console.log(response.json().then(
                     (data) => { console.log(data) }
                 ));
-            });
+            }){
+              duration = "6";
+            };
   //var SpotifyWebApi = require('spotify-web-api-js');
   //var spotifyApi = new SpotifyWebApi();
 // var spotifyApi = new SpotifyWebApi();
