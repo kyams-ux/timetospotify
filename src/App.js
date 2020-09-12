@@ -13,18 +13,24 @@ function App() {
   const client_secret = "b392e37deb804c08a6e56e613b9e3884";
   const redirect_uri = "http://timetospotify.vercel.app";
   const id = "43ZHCT0cAZBISjO8DG9PnE";
-  const accessToken = "BQCCuRgVuOzpHLJSlMQcoz25UY6rPxHj9CQVgIkSzs_nUYKlQ1cOaQ0QHfLFri2nOAEsYrryZZPaM6hJE7LT1AsiTYIMn26tFy2cM7fcuQ0DSYvHo1RUwzjeb0tC7SVz8NrqvY55ab2BZA";
-  const duration = "5";
+  const accessToken = "BQBkJlN6ClZV29szsneK2NQl2w7D7w9VpG14I-yykrCPHlWjKKaw9n6oJq4coN24Hv0t_TH5XHCUgEuB-qqL4tIRzzk1cAAtexWOY3HPbuKFH-JifvkGBMs0HG9PptNl_fYqdu6W-KaBlQ";
+  const duration = "6";
 
-  fetch('https://api.spotify.com/v1/artists/21E3waRsmPlU7jZsS13rcj', {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.spotify.com/v1/tracks/3n3Ppam7vgaVa1iaRUc9Lp",{
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + accessToken
             }
         })
-            .then(function(response){ duration = "6";}
-            );
+            .then(res => res.json())
+            .then((result) => {
+              setItems(result.name);
+            })
+        },[])
   //var SpotifyWebApi = require('spotify-web-api-js');
   //var spotifyApi = new SpotifyWebApi();
 // var spotifyApi = new SpotifyWebApi();
@@ -53,6 +59,7 @@ function App() {
       <h1>Time to Spotify</h1>
       <h2>A timer using the lengths of songs</h2>
       <p>Track 1: {duration}</p>
+      <p>Items {items}</p>
       <br />
       <h2>The date according to Go is:</h2>
       <p>{date ? date : 'Loading date...'}</p>
