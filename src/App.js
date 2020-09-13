@@ -13,13 +13,14 @@ function App() {
   const client_secret = "b392e37deb804c08a6e56e613b9e3884";
   const redirect_uri = "http://timetospotify.vercel.app";
   const id = "43ZHCT0cAZBISjO8DG9PnE";
-  const accessToken = "BQDyIevWpxOeKrb6UBN8vvC-cLZ_oB1SrU08ONpWNuNcqlPK72kPin09xsSioxKet_70bXZv-hAdAeTxAu8dpY97jftpYcc9VczWowhRzjQM7GMNdof7AQbKT2N_FGBwErpPz0YXdRP-Pg";
+  const accessToken = "BQAazLJSkSGGVcJMX0I8cMjDNjFKxd-VRv8m0NZ24VtTtRvTyoHQ9zKP8TCoTT2ybIQLqZAtPWVqQNTWFKlJuqedq9C1EoQ-f8Oc6cFJOILbHTnoByCbIYesQICa_tGc_G4pN7Kn3cnCqg";
   const duration = "7";
 
   const [items, setItems] = useState([]);
+  const [genre, setGenre] = useState('');
 
   useEffect(() => {
-    fetch("https://api.spotify.com/v1/tracks/0t1kP63rueHleOhQkYSXFY",{
+    fetch("https://api.spotify.com/v1/search?q=pop&type=track",{
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -28,7 +29,7 @@ function App() {
         })
             .then(res => res.json())
             .then((result) => {
-              setItems(result.name);
+              setItems(result.tracks[0].name);
             })
         },[])
   //var SpotifyWebApi = require('spotify-web-api-js');
@@ -54,6 +55,15 @@ function App() {
     getDate();
   }, []);
 
+  const handleChange = (event) => {
+  setGenre(event.target.value);
+}
+
+const handleSubmit = (event) => {
+  alert('Name submited with hooks: ' + name);
+  event.preventDefault();
+}
+
   return (
     <main>
       <h1>Time to Spotify</h1>
@@ -62,8 +72,8 @@ function App() {
      <form>
        <label>
        Genre:
-       <select>
-          <option value="grapefruit">Grapefruit</option>
+       <select onChange={handleChange}>
+          <option value="pop">Pop</option>
           <option value="lime">Lime</option>
           <option selected value="coconut">Coconut</option>
           <option value="mango">Mango</option>
@@ -72,6 +82,7 @@ function App() {
        <input type="submit" value="Submit" />
      </form>
       <p>Track name: {items}</p>
+      <p>Genre: {genre}</p>
       <br />
       <h2>The date according to Go is:</h2>
       <p>{date ? date : 'Loading date...'}</p>
