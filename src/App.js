@@ -20,7 +20,7 @@ function App() {
   const [genre, setGenre] = useState('');
 
   useEffect(() => {
-    fetch("https://api.spotify.com/v1/search?q=pop&type=track",{
+    fetch("https://api.spotify.com/v1/search?q=genre:%22pop%22&type=track",{
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -74,9 +74,9 @@ const handleSubmit = (event) => {
        Genre:
        <select onChange={handleChange}>
           <option value="pop">Pop</option>
-          <option value="lime">Lime</option>
-          <option selected value="coconut">Coconut</option>
-          <option value="mango">Mango</option>
+          <option value="edm">EDM</option>
+          <option selected value="hip%20hop">Hip Hop</option>
+          <option value="latin">Latin</option>
           </select>
        </label>
        <input type="submit" value="Submit" />
