@@ -24,7 +24,7 @@ function App() {
   const [genre, setGenre] = useState("pop");
 
   useEffect(() => {
-    fetch('https://api.spotify.com/v1/search?q=genre:pop&type=track',{
+    fetch('https://api.spotify.com/v1/search?q=genre:'+genre+'&type=track',{
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -37,9 +37,6 @@ function App() {
                              setItems3(results.tracks.items[2].name)
                              setItems4(results.tracks.items[3].name)
                              setDur0(results.tracks.items[0].duration_ms)})
-            .then(console.log(items))
-              .then(result => console.log(result.tracks.items[0].name) )
-            .then(console.log('items: 1'))
         },[])
   //var SpotifyWebApi = require('spotify-web-api-js');
   //var spotifyApi = new SpotifyWebApi();
