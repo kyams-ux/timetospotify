@@ -29,7 +29,7 @@ function App() {
         })
             .then(res => res.json())
             .then((result) => {
-              setItems(result.tracks[0].name);
+              setItems(result.tracks[0].items.name);
             })
         },[])
   //var SpotifyWebApi = require('spotify-web-api-js');
