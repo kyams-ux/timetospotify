@@ -13,7 +13,7 @@ function App() {
   const client_secret = "b392e37deb804c08a6e56e613b9e3884";
   const redirect_uri = "http://timetospotify.vercel.app";
   const id = "43ZHCT0cAZBISjO8DG9PnE";
-  const accessToken = "BQAdGhYP_PxAPwHktDFz9HLrtWhwcADQR4GgQ7_WWuF6Rwq-bz2qHBGBpmtCDHRuH-ZiZ6_H5HHOqyzVO1XNTxy02R0VRDQXpRUn62qmU7mTp73Sh0UMTfWy7iR5Nsu0tCCqSACrngmThQ";
+  const accessToken = "BQBS8EKmOtqNUuzjfVDqFlQUoOxJau4f_TK5YLM2aewWqtj6mf3tfv6-Jxyb_Dm2FEu9hQ_TvLifiN4jqhk26f6gQKCUayekwClL-VEqdVov7QdqOXIsqaumc6igpzsmXwwvk1qd-CW9mQ";
   const duration = "9";
 
   const [items, setItems] = useState('');
@@ -24,7 +24,7 @@ function App() {
   const [genre, setGenre] = useState("pop");
 
   useEffect(() => {
-    fetch('https://api.spotify.com/v1/search?q=genre:'+genre+'&type=track',{
+    fetch('https://api.spotify.com/v1/search?q=genre:pop&type=track',{
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
