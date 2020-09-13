@@ -8,13 +8,12 @@ import './App.css';
 
 
 function App() {
-
-  const client_id = "639db5cc638f46aeb796d411a8f4de45";
-  const client_secret = "b392e37deb804c08a6e56e613b9e3884";
-  const redirect_uri = "http://timetospotify.vercel.app";
-  const id = "43ZHCT0cAZBISjO8DG9PnE";
-  const accessToken = "BQBS8EKmOtqNUuzjfVDqFlQUoOxJau4f_TK5YLM2aewWqtj6mf3tfv6-Jxyb_Dm2FEu9hQ_TvLifiN4jqhk26f6gQKCUayekwClL-VEqdVov7QdqOXIsqaumc6igpzsmXwwvk1qd-CW9mQ";
-  const duration = "9";
+//  const client_id = "639db5cc638f46aeb796d411a8f4de45";
+//  const client_secret = "b392e37deb804c08a6e56e613b9e3884";
+//  const redirect_uri = "http://timetospotify.vercel.app";
+//  const id = "43ZHCT0cAZBISjO8DG9PnE";
+  const accessToken = "BQBHd1XfSOPNwsKMBKw1XPtwm44G2ogNZqMgViLQ5lxSxNwjhqufYyQLeyKwAW3RTDb_05zsqtCXvEAsdShEcmD4kjpKznNYHMP8MWFQ3KKoO98rLV8WMRFJbjRbRI3w7gl3hgJCQWGq9w";
+  //const duration = "9";
 
   const [items, setItems] = useState('');
   const [items2, setItems2] = useState('');
@@ -37,7 +36,7 @@ function App() {
                              setItems3(results.tracks.items[2].name)
                              setItems4(results.tracks.items[3].name)
                              setDur0(results.tracks.items[0].duration_ms)})
-        },[])
+        })
   //var SpotifyWebApi = require('spotify-web-api-js');
   //var spotifyApi = new SpotifyWebApi();
 // var spotifyApi = new SpotifyWebApi();
@@ -65,10 +64,10 @@ function App() {
   setGenre(event.target.value);
 }
 
-const handleSubmit = (event) => {
-  alert('Name submited with hooks: ' + name);
-  event.preventDefault();
-}
+//const handleSubmit = (event) => {
+//  alert('Name submited with hooks: ' + name);
+//  event.preventDefault();
+//}
 
   return (
     <main>
@@ -79,7 +78,7 @@ const handleSubmit = (event) => {
         <option value="pop">Pop</option>
         <option value="hip%20hip">Hip Hop</option>
         <option value="classical">Classical</option>
-        <option value="EDM">EDM</option>
+        <option value="edm">EDM</option>
       </select>
       <h2> Results </h2>
       <p>Track 1 name: {items} </p>
