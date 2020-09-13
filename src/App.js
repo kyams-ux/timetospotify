@@ -14,13 +14,13 @@ function App() {
   const redirect_uri = "http://timetospotify.vercel.app";
   const id = "43ZHCT0cAZBISjO8DG9PnE";
   const accessToken = "BQAazLJSkSGGVcJMX0I8cMjDNjFKxd-VRv8m0NZ24VtTtRvTyoHQ9zKP8TCoTT2ybIQLqZAtPWVqQNTWFKlJuqedq9C1EoQ-f8Oc6cFJOILbHTnoByCbIYesQICa_tGc_G4pN7Kn3cnCqg";
-  const duration = "7";
+  const duration = "8";
 
   const [items, setItems] = useState([]);
   const [genre, setGenre] = useState('');
 
   useEffect(() => {
-    fetch("https://api.spotify.com/v1/search?q=genre:%22pop%22&type=track",{
+    fetch("https://api.spotify.com/v1/search?q=genre:pop&type=track",{
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
