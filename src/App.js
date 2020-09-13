@@ -13,13 +13,13 @@ function App() {
   const client_secret = "b392e37deb804c08a6e56e613b9e3884";
   const redirect_uri = "http://timetospotify.vercel.app";
   const id = "43ZHCT0cAZBISjO8DG9PnE";
-  const accessToken = "BQBAzNV2dauF-mo_PMXU6AtLr89U6_bU2zfZ5zorG9HW_3a0PDc6KGjVUv6UmMrLQ48nHKofF1Myg4S2bb1FTnoeHQiaEGt9CZ7F7zKRme8E4-H_2KiPUOQ6y3PrrcBZyRLM2Kf2FjCF4w";
-  const duration = "6";
+  const accessToken = "BQDyIevWpxOeKrb6UBN8vvC-cLZ_oB1SrU08ONpWNuNcqlPK72kPin09xsSioxKet_70bXZv-hAdAeTxAu8dpY97jftpYcc9VczWowhRzjQM7GMNdof7AQbKT2N_FGBwErpPz0YXdRP-Pg";
+  const duration = "7";
 
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.spotify.com/v1/artists/0t1kP63rueHleOhQkYSXFY",{
+    fetch("https://api.spotify.com/v1/tracks/0t1kP63rueHleOhQkYSXFY",{
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
