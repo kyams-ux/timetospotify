@@ -13,13 +13,13 @@ function App() {
   const client_secret = "b392e37deb804c08a6e56e613b9e3884";
   const redirect_uri = "http://timetospotify.vercel.app";
   const id = "43ZHCT0cAZBISjO8DG9PnE";
-  const accessToken = "BQBkJlN6ClZV29szsneK2NQl2w7D7w9VpG14I-yykrCPHlWjKKaw9n6oJq4coN24Hv0t_TH5XHCUgEuB-qqL4tIRzzk1cAAtexWOY3HPbuKFH-JifvkGBMs0HG9PptNl_fYqdu6W-KaBlQ";
+  const accessToken = "BQBAzNV2dauF-mo_PMXU6AtLr89U6_bU2zfZ5zorG9HW_3a0PDc6KGjVUv6UmMrLQ48nHKofF1Myg4S2bb1FTnoeHQiaEGt9CZ7F7zKRme8E4-H_2KiPUOQ6y3PrrcBZyRLM2Kf2FjCF4w";
   const duration = "6";
 
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.spotify.com/v1/tracks/3n3Ppam7vgaVa1iaRUc9Lp",{
+    fetch("https://api.spotify.com/v1/tracks/3Nrfpe0tUJi4K4DXYWgMUX",{
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -59,7 +59,14 @@ function App() {
       <h1>Time to Spotify</h1>
       <h2>A timer using the lengths of songs</h2>
       <p>Track 1: {duration}</p>
-      <p>Items {items}</p>
+      <form>
+        <label>
+        Genre:
+        <input type="text" name="name"/>
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+      <p>Track name {items}</p>
       <br />
       <h2>The date according to Go is:</h2>
       <p>{date ? date : 'Loading date...'}</p>
