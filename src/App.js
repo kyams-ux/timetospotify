@@ -59,14 +59,19 @@ function App() {
       <h1>Time to Spotify</h1>
       <h2>A timer using the lengths of songs</h2>
       <p>Track 1: {duration}</p>
-      <form>
-        <label>
-        Genre:
-        <input type="text" name="name"/>
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-      <p>Track name {items}</p>
+     <form>
+       <label>
+       Genre:
+       <select>
+          <option value="grapefruit">Grapefruit</option>
+          <option value="lime">Lime</option>
+          <option selected value="coconut">Coconut</option>
+          <option value="mango">Mango</option>
+          </select>
+       </label>
+       <input type="submit" value="Submit" />
+     </form>
+      <p>Track name: {items}</p>
       <br />
       <h2>The date according to Go is:</h2>
       <p>{date ? date : 'Loading date...'}</p>
