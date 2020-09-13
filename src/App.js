@@ -19,7 +19,7 @@ function App() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.spotify.com/v1/tracks/3Nrfpe0tUJi4K4DXYWgMUX",{
+    fetch("https://api.spotify.com/v1/artists/0t1kP63rueHleOhQkYSXFY",{
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
