@@ -19,10 +19,12 @@ function App() {
   const [items2, setItems2] = useState('');
   const [items3, setItems3] = useState('');
   const [items4, setItems4] = useState('');
+  const [items5, setItems5] = useState('');
   const [dur0, setDur0] = useState(0);
-    const [dur1, setDur1] = useState(0);
-      const [dur2, setDur2] = useState(0);
-        const [dur3, setDur3] = useState(0);
+  const [dur1, setDur1] = useState(0);
+  const [dur2, setDur2] = useState(0);
+  const [dur3, setDur3] = useState(0)
+  const [dur4, setDur4] = useState(0);
   const [genre, setGenre] = useState("pop");
 
   useEffect(() => {
@@ -38,10 +40,12 @@ function App() {
                              setItems2(results.tracks.items[1].name)
                              setItems3(results.tracks.items[2].name)
                              setItems4(results.tracks.items[3].name)
+                             setItems5(results.tracks.items[4].name)
                              setDur0(results.tracks.items[0].duration_ms)
-                           setDur1(results.tracks.items[1].duration_ms)
-                         setDur2(results.tracks.items[2].duration_ms)
-                       setDur3(results.tracks.items[3].duration_ms)})
+                             setDur1(results.tracks.items[1].duration_ms)
+                             setDur2(results.tracks.items[2].duration_ms)
+                             setDur3(results.tracks.items[3].duration_ms)
+                             setDur4(results.tracks.items[4].duration_ms)})
         })
   //var SpotifyWebApi = require('spotify-web-api-js');
   //var spotifyApi = new SpotifyWebApi();
@@ -99,6 +103,10 @@ function App() {
       <p>Track 4 name: {items4} </p>
       <p>Track 4 duration: {Math.floor(dur3/60000)} min {parseFloat((dur3/60000 %1)*60).toFixed(1)} sec</p>
       <br />
+      <p>Track 5 name: {items5} </p>
+      <p>Track 5 duration: {Math.floor(dur4/60000)} min {parseFloat((dur4/60000 %1)*60).toFixed(1)} sec</p>
+      <br />
+      <h2> Total duration: {Math.floor((dur0+dur1+dur2+dur3+dur4)/60000)} min {parseFloat(((dur0+dur1+dur2+dur3+dur4)/60000 %1)*60).toFixed(1)} sec</h2>
       <p>Genre: {genre}</p>
       <br />
       <h2>The date according to Go is:</h2>
