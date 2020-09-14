@@ -20,6 +20,9 @@ function App() {
   const [items3, setItems3] = useState('');
   const [items4, setItems4] = useState('');
   const [dur0, setDur0] = useState(0);
+    const [dur1, setDur1] = useState(0);
+      const [dur2, setDur2] = useState(0);
+        const [dur3, setDur3] = useState(0);
   const [genre, setGenre] = useState("pop");
 
   useEffect(() => {
@@ -35,7 +38,10 @@ function App() {
                              setItems2(results.tracks.items[1].name)
                              setItems3(results.tracks.items[2].name)
                              setItems4(results.tracks.items[3].name)
-                             setDur0(results.tracks.items[0].duration_ms)})
+                             setDur0(results.tracks.items[0].duration_ms)
+                           setDur1(results.tracks.items[1].duration_ms)
+                         setDur2(results.tracks.items[2].duration_ms)
+                       setDur3(results.tracks.items[3].duration_ms)})
         })
   //var SpotifyWebApi = require('spotify-web-api-js');
   //var spotifyApi = new SpotifyWebApi();
@@ -85,8 +91,14 @@ function App() {
       <p>Track 1 duration: {Math.floor(dur0/60000)} min {parseFloat((dur0/60000 %1)*60).toFixed(1)} sec</p>
       <br />
       <p>Track 2 name: {items2} </p>
+      <p>Track 2 duration: {Math.floor(dur1/60000)} min {parseFloat((dur1/60000 %1)*60).toFixed(1)} sec</p>
+      <br />
       <p>Track 3 name: {items3} </p>
+      <p>Track 3 duration: {Math.floor(dur2/60000)} min {parseFloat((dur2/60000 %1)*60).toFixed(1)} sec</p>
+      <br />
       <p>Track 4 name: {items4} </p>
+      <p>Track 4 duration: {Math.floor(dur3/60000)} min {parseFloat((dur3/60000 %1)*60).toFixed(1)} sec</p>
+      <br />
       <p>Genre: {genre}</p>
       <br />
       <h2>The date according to Go is:</h2>
