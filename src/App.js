@@ -86,11 +86,14 @@ function App() {
       <p>Choose a genre:</p>
       <select onChange = {handleChange}>
         <option value="pop">Pop</option>
-        <option value="hip%20hip">Hip Hop</option>
+        <option value="hip-hop">Hip Hop</option>
         <option value="classical">Classical</option>
         <option value="edm">EDM</option>
+        <option value="soft-rock">Soft Rock</option>
       </select>
       <h2> Results </h2>
+      <h2> Total duration: {Math.floor((dur0+dur1+dur2+dur3+dur4)/60000)} min {parseFloat(((dur0+dur1+dur2+dur3+dur4)/60000 %1)*60).toFixed(1)} sec</h2>
+      <p>Genre: {genre}</p>
       <p>Track 1 name: {items} </p>
       <p>Track 1 duration: {Math.floor(dur0/60000)} min {parseFloat((dur0/60000 %1)*60).toFixed(1)} sec</p>
       <br />
@@ -105,9 +108,7 @@ function App() {
       <br />
       <p>Track 5 name: {items5} </p>
       <p>Track 5 duration: {Math.floor(dur4/60000)} min {parseFloat((dur4/60000 %1)*60).toFixed(1)} sec</p>
-      <br />
-      <h2> Total duration: {Math.floor((dur0+dur1+dur2+dur3+dur4)/60000)} min {parseFloat(((dur0+dur1+dur2+dur3+dur4)/60000 %1)*60).toFixed(1)} sec</h2>
-      <p>Genre: {genre}</p>
+
       <br />
       <h2>The date according to Go is:</h2>
       <p>{date ? date : 'Loading date...'}</p>
